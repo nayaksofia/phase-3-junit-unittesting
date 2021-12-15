@@ -26,6 +26,41 @@ class CalculatorAppTest {
 	}
 	
 	
+	@Test
+	@DisplayName("Division Test :: Positive Numbers")
+	public void testDivPositives() {
+		assertEquals(1,app.div(2,2));
+		assertEquals(2,app.div(6,3));
+		assertEquals(3,app.div(6,2));
+	}
+	
+	@Test
+	@DisplayName("Division Test :: Negative Numbers")
+	public void testDivNegatives() {
+		assertEquals(-1,app.div(-2,2));
+		assertEquals(1,app.div(-3,-3));
+		assertEquals(-3,app.div(6,-2));
+	}
+	
+	
+	
+	
+	
+	@Test
+	@DisplayName("Multiplication Test :: Negative Numbers")
+	public void testMulNegatives() {
+		assertEquals(-4,app.mul(-2,2));
+		assertEquals(6,app.mul(-3,-2));
+		assertEquals(-12,app.mul(6,-2));
+	}
+	
+	@Test
+	@DisplayName("Multiplication Test :: Positive Numbers")
+	public void testMulPositive() {
+		assertEquals(4,app.mul(2,2));
+		assertEquals(6,app.mul(3,2));
+		assertEquals(12,app.mul(6,2));
+	}
 	
 	@Test
 	@DisplayName("Substraction Test :: Neagative Numbers")
